@@ -1,0 +1,95 @@
+Directed graph Adjacent list
+
+code:
+
+def addNode(v):
+    if v in graph:
+        print(v,"is already available")
+    else:
+        graph[v]=[]
+def show():
+    for x in graph:
+        print(x,":",graph[x])
+def addEdge(node1,node2):
+    if node1 not in graph:
+        print(node1,"is not present in graph")
+    elif node2 not in graph:
+        print(node2,"is not present in graph")
+    else:
+        graph[node1].append(node2)
+graph={}
+while True:
+    print()
+    print("1.AddNode\n2.AddEdge\n3.printlist\n4.Exit")
+    ch=int(input("Enter your choice"))
+    if ch==1:
+        v=input("Enter node")
+        addNode(v)
+    elif ch==2:
+        node1=input("Enter node1")
+        node2=input("Enter node2")
+        addEdge(node1,node2)
+    elif ch==3:
+        show()
+    elif ch==4:
+        break
+    else:
+        print("Invalid choice")
+
+output:
+
+1.AddNode
+2.AddEdge
+3.printlist
+4.Exit
+Enter your choice1
+Enter node45
+
+1.AddNode
+2.AddEdge
+3.printlist
+4.Exit
+Enter your choice1
+Enter node46
+
+1.AddNode
+2.AddEdge
+3.printlist
+4.Exit
+Enter your choice1
+Enter node47
+
+1.AddNode
+2.AddEdge
+3.printlist
+4.Exit
+Enter your choice2
+Enter node147
+Enter node287
+87 is not present in graph
+
+1.AddNode
+2.AddEdge
+3.printlist
+4.Exit
+Enter your choice3
+45 : []
+46 : []
+47 : []
+
+1.AddNode
+2.AddEdge
+3.printlist
+4.Exit
+Enter your choice2
+Enter node146
+Enter node247
+
+1.AddNode
+2.AddEdge
+3.printlist
+4.Exit
+Enter your choice3
+45 : []
+46 : ['47']
+47 : []
