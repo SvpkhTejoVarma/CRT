@@ -20,3 +20,6 @@ graph={
 visited=[]
 queue=[]
 bfs(visited,graph,'5')
+
+
+5 3 7 2 4 8
